@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Employee Information</title>
+  <link href="./assets/css/common.css" rel="stylesheet" />
+
+  <link href="./assets/css/easy-responsive-tabs.css" rel="stylesheet" />
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <script type="text/javascript">
+    if (window.addEventListener) {
+      window.addEventListener('load', function () {
+        setTimeout(scrollTo, 0, 0, 1);
+      }, false);
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <script src="./assets/js/jquery.flexslider.js"></script>
+
+  <script src="./assets/js/jquery.dotdotdot.min.js"></script>
+
+  <script src="./assets/js/easyResponsiveTabs.js"></script>
+
+  <script src="./assets/js/jcarousellite_1.0.1.min.js"></script>
+
+  <script src="./assets/js/ui.js"></script>
+
+  <script src="./assets/js/otf.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+
+
+  <meta property="og:type" content="website" />
+  <script src="./assets/js/common.js"></script>
+
+</head>
+
+<body class="nav-md">
+  <app-root></app-root>
+</body>
+
+<script type="text/javascript">
+  $("#upload_File").on("change", function (e) {
+    console.log('on change');
+    var formData = new FormData();
+    formData.append('file', $('#uploadFile')[0].files[0]);
+
+    $.ajax({
+      url: '/hanon/uploadStocksFile',
+      type: 'POST',
+      data: formData,
+      processData: false, // tell jQuery not to process the data
+      contentType: false, // tell jQuery not to set contentType
+      success: function (data) {
+        location.reload(true);
+        console.log(data.files[0].newFilename);
+        window.location.href = '/hanon/folder/' + data.files[0].newFilename;
+        //	alert(data);
+      }
+    });
+  });
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
+ 
+  function setCookie(cName, cValue, cDay) {
+    var expire = new Date();
+    expire.setDate(expire.getDate() + cDay);
+    cookies = cName + '=' + escape(cValue) + '; path=/ '; // íê¸ ê¹¨ì§ì ë§ê¸°ìí´ escape(cValue)ë¥¼ í©ëë¤.
+    if (typeof cDay != 'undefined')
+      cookies += ';expires=' + expire.toGMTString() + ';';
+    document.cookie = cookies;
+  }
+
+
+  function getCookie(cName) {
+    cName = cName + '=';
+    var cookieData = document.cookie;
+    var start = cookieData.indexOf(cName);
+    var cValue = '';
+    if (start != -1) {
+      start += cName.length;
+      var end = cookieData.indexOf(';', start);
+      if (end == -1)
+        end = cookieData.length;
+      cValue = cookieData.substring(start, end);
+    }
+    return unescape(cValue);
+  }
+</script>
+
+</html>

@@ -1,0 +1,94 @@
+ <!-- page content -->
+ 
+ <div class="right_col" role="main">
+
+        <div class="breadcrumb">
+        	<ul>
+            	<li><a href="index.html">Home</a></li>
+                <li>Employee Master</li>
+              
+            </ul>
+        </div>       
+        <!-- data table -->
+        <div class="row">
+        	<div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Employee Master</h2>
+                <div class="pull-right"><b>Add Employee</b><file-upload #fu (change)="fu.addEmployeeUpload()" [multiple]="true"></file-upload></div>
+                <div class="pull-right"><b>Filter Stock</b><file-upload #fu (change)="fu.uploadStocksFile()" [multiple]="true"></file-upload></div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+					
+                  <!-- start form for validation -->
+                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+           <div class="form-group">
+                      <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Employee Id</label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="middle-name" class="form-control col-md-7 col-xs-12" [(ngModel)]="emp.empId" type="text" name="middle-name">
+                      </div>
+                    </div>
+					
+					<div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="middle-name" class="form-control col-md-7 col-xs-12" [(ngModel)]="emp.firstName" type="text" name="middle-name">
+                      </div>
+                    </div>
+                    
+					<div class="form-group">
+                      <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Last Name</label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="middle-name" class="form-control col-md-7 col-xs-12" [(ngModel)]="emp.lastName" type="text" name="middle-name">
+                      </div>
+                    </div>
+					
+                  
+                    
+                   <div class="ln_solid"></div> 
+                  
+			  <table class="table table-bordered" id="empTbl">
+                            <thead>
+                            
+                              <tr>
+                                <th>Emp Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                 <th class="last">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                             
+                              <tr *ngFor="let emp of licList" >
+                                <input type="hidden" value="{{emp}}"/>
+                                <td >{{emp.empId}}</td>
+                                <td>{{emp.firstName}}</td>
+                                 <td>{{emp.lastName}}</td>
+                                 <td class="last"><a href="Javascript:;"  (click)="editEmployee(this)" title="Edit"><i class="fa fa-edit"></i></a><a href="Javascript:;" (click)="delEmployee(this)" title="Delete"><i class="fa fa-trash"></i></a></td>
+                              </tr>
+                             
+                            </tbody>
+                          </table>
+                    <div class="ln_solid"></div>
+                    
+                      <div class="col-md-12">						
+                        <button type="button" class="btn btn-primary pull-right">Cancel</button> 
+                      	<button type="button" class="btn btn-success pull-right" (click)="addLicClass()">Submit</button>                       
+                      </div>
+
+                  </form>
+                  <!-- end form for validations -->
+
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        
+      </div>
+
+        <!-- /page content -->

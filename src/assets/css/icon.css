@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* btn */
+.btn_blue {min-width:122px;padding:10px 0;font-size:16px;font-weight:bold;color:#fff;background:#1d445c;text-align:center;vertical-align: middle;}
+.btn_skyblue {min-width:122px;padding:10px 0;font-size:16px;font-weight:bold;color:#fff;background:#91b9d6;text-align:center;vertical-align: middle;}
+.btn_blue2 {min-width:64px;padding:2px 10px 1px 10px;font-size:12px;font-weight:bold;color:#fff;background:#1d445c;text-align:center;vertical-align: middle;}
+.btn_print {display:block;width:68px;height:24px;background: url("../images/common/btn_print.png") no-repeat;vertical-align: middle;}
+
+/* icon */
+[class^="icon_"]:before,[class*=" icon_"]:before{text-decoration:inherit;display:inline-block;speak:none;}
+[class^="icon_"], [class*="icon_"] {display:inline-block;vertical-align:middle;background-image: url("../images/sprite.png");background-repeat:no-repeat;font-size:0;line-height:0;}
+
+.icon_lan_more{width:7px;height:4px;background-position:0 0;vertical-align:top;margin:4px 0 0 7px}
+.icon_dot{width:7px;height:7px;background-position:-360px -32px}
+.icon_dot2{width:9px;height:9px;background-position:-49px -18px}
+.icon_dot.current{background-position:-382px -32px}
+.icon_dot2.current{width:9px;height:9px;background-position:0 -18px}
+.icon_prev{width:7px;height:7px;background-position:-404px -32px}
+.icon_stop{width:7px;height:7px;background-position:-424px -32px}
+.icon_next{width:7px;height:7px;background-position:-446px -32px}
+.icon_mic{width:23px;height:45px;background-position:0 -50px}
+.icon_light{width:49px;height:47px;background-position:-49px -46px}
+.icon_leaf{width:39px;height:40px;background-position:-119px -54px}
+.icon_global{width:45px;height:43px;background-position:-180px -52px}
+.icon_graph{width:41px;height:34px;background-position:-246px -55px}
+.icon_stock_high{width:8px;height:7px;background-position:-16px 0}
+.icon_man{width:45px;height:42px;background-position:-311px -50px}
+.icon_m_open{width:13px;height:13px;background-position:0 -125px;margin-top:5px;}
+.active .icon_m_open{background-position:-24px -132px;margin-top:5px;}
+.icon_m_close{width:13px;height:3px;background-position:-24px -132px;margin-top:10px}
+.icon_list_dot{width:2px;height:2px;background-position:-62px 0;margin-right:7px;vertical-align:middle;}
+.icon_srch{width:25px;height:25px;background-position:0 -147px;vertical-align:middle;}
+.icon_arrow2{width:7px;height:4px;background-position:-80px 0;vertical-align:middle;}
+.icon_open{width:29px;height:25px;background-position:-220px 0;vertical-align:middle;}
+.open .icon_open{width:29px;height:25px;background-position:-260px 0;vertical-align:middle;}
+.icon_tgl {width:28px;height:28px;background-position:-472px -40px;vertical-align:middle;}
+.open .icon_tgl {background-position:-472px -68px;}
+.icon_buy {width:51px;height:19px;background-position:-70px -120px;vertical-align:middle;}
+.icon_arr_down {width:7px;height:4px;margin-left:10px;background-position:-300px 0;vertical-align:middle;}
+.icon_arr_up {width:7px;height:4px;margin-left:10px;background-position:-320px 0;vertical-align:middle;}
+.icon_bu1 {width:3px;height:5px;margin-right:7px;background-position:-418px 0;vertical-align:middle;}
+.current .icon_bu1 {width:6px;height:5px;margin-right:7px;background-position:-427px 0;vertical-align:middle;}
+
+.icon_pdf_down{width:28px;height:26px;margin-right:5px;background-position:-472px 0;vertical-align:middle;}
+.icon_outlook {width:22px;height:22px;background-position:-478px -110px;vertical-align:middle;}
+.icon_excel {width:16px;height:16px;background-position:-483px -150px;vertical-align:middle;}
+.icon_pdf{width:16px;height:16px;background-position:-483px -175px;vertical-align:middle;}
+.y2014 .icon_cock_r {width:7px;height:11px;background-position:-340px 0;vertical-align:middle;}
+.y2013 .icon_cock_r {width:7px;height:11px;background-position:-340px 0;vertical-align:middle;}
+.y2012 .icon_cock_r {width:7px;height:11px;background-position:-360px 0;vertical-align:middle;}
+.y2011 .icon_cock_r {width:7px;height:11px;background-position:-380px 0;vertical-align:middle;}
+.icon_print {width:16px;height:16px;background-position:0 -182px;vertical-align:middle;}
+
+.bu_link {display:inline-block;width:4px;height:7px;margin-left:8px;background: url("../images/icons/bu_arrow1.png") no-repeat;vertical-align: middle;font-size:0;line-height:0;}
+.ico_calendar {display:inline-block;width:16px;height:16px;margin-right:6px;background: url("../images/icons/ico_calendar.png") no-repeat;vertical-align: middle;font-size:0;line-height:0;}
+.ico_mail {display:inline-block;width:16px;height:16px;margin-right:6px;background: url("../images/icons/ico_mail.png") no-repeat;vertical-align: middle;font-size:0;line-height:0;}
+.ico_request {display:inline-block;width:16px;height:16px;margin-right:6px;background: url("../images/icons/ico_request.png") no-repeat;vertical-align: middle;font-size:0;line-height:0;}
+.ico_disclaimer {display:inline-block;width:16px;height:16px;margin-right:6px;background: url("../images/icons/icon_Disclaimer.png") no-repeat;vertical-align: middle;font-size:0;line-height:0;}
+.ico_video_play {display:inline-block;width:80px;height:80px;background: url("../images/icons/ico_video_play.png") no-repeat;vertical-align: middle;font-size:0;line-height:0;}
+.ico_bl_arrow {display:inline-block;width:4px;height:7px;margin-left:7px;background: url("../images/bl_arrow2.png") no-repeat;vertical-align: middle;font-size:0;line-height:0;}

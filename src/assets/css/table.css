@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* Basic Table */
+.table_basic {table-layout:fixed;width:100%;border-top:1px solid #dad8d8;border-bottom:1px solid #dad8d8;}
+.table_basic th,.table_basic td {height:28px;font-size:12px;color:#585858;text-align:center;border-left:1px solid #dad8d8;}
+.table_basic th { font-weight:normal;padding:8px 0 7px 0;background:#f4f4f4;}
+.table_basic td { padding:8px 24px 7px 24px;border-top:1px solid #dad8d8;}
+.table_basic tr th:first-child, .table_basic tr td:first-child {border-left:0;}
+
+/* s:141211 추가*/
+.table_perinfo td { vertical-align:middle; }
+.table_perinfo th { vertical-align:middle; border-top:1px solid #dad8d8; }
+.table_basic tr th.bl { border-left:1px solid #dad8d8; }
+/* e:141211 추가*/
+
+.table_col{table-layout:fixed;width:100%;border-top:1px solid #dad8d8;font-family:'Arial';font-size:0.75em;}
+.table_col tbody th{background-color:#f3f3f3;color:#666;font-weight:normal;padding:11px 0 0 1.9480519%;text-align:left}
+.table_col tbody td{color:#9c9797;padding:11px 0 0 4.2207792%;}
+
+.tbl_type1 {table-layout:fixed;width:100%;border-top:2px solid #1d445c;border-bottom:1px solid #dad8d8;}
+.tbl_type1 thead { display:none; }
+.tbl_type1 th,.tbl_type1 td {font-size:12px;color:#666;text-align:center;vertical-align:middle;}
+.tbl_type1 th { font-weight:normal;padding:10px 0 11px 0;background:#f4f4f4;}
+.tbl_type1 tr.even td { background:#f3f3f3;}
+.tbl_type1 td { padding:8px 24px 7px 24px;}
+.tbl_type1 tr th:first-child, .tbl_type1 tr td:first-child {border-left:0;}
+
+.tbl_type2 {table-layout:fixed;width:100%;border-bottom:1px solid #dad8d8;}
+.tbl_type2 thead th { color:#fff;background:#1d71c5; }
+.tbl_type2 th,.tbl_type2 td {font-size:12px;color:#666;text-align:center;vertical-align:middle;}
+.tbl_type2 th { font-weight:normal;padding:10px 0 11px 0;background:#f4f4f4;}
+.tbl_type2 tr.even td { background:#f3f3f3;}
+.tbl_type2 td { padding:8px 8px 7px 8px;border-top:1px solid #e4e4e4; }
+.tbl_type2 td.gray_bg { background:#f5f6f8; }
+.tbl_type2 tr th:first-child, .tbl_type2 tr td:first-child {border-left:0;}
+.tbl_type2 tr:first-child td {border-top:0;}
+.tbl_type2 tr td.alignL {padding-left:60px;}
+
+.tbl_type3 {table-layout:fixed;width:100%;border-bottom:1px solid #dad8d8;}
+.tbl_type3 thead th { color:#666; background:#f4f4f4; border-top:1px solid #dad8d8; border-bottom:1px solid #dad8d8;  }
+.tbl_type3 thead th.alignL {padding-left:20px;}
+.tbl_type3 th,.tbl_type3 td {font-size:12px;color:#666;text-align:center;vertical-align:middle;}
+.tbl_type3 th { font-weight:normal;padding:10px 0 11px 0;background:#f4f4f4;}
+.tbl_type3 tr.even td { background:#f3f3f3;}
+.tbl_type3 td { padding:8px 8px 7px 8px;border-top:1px solid #e4e4e4; }
+.tbl_type3 td.gray_bg { background:#f5f6f8; }
+.tbl_type3 tr th:first-child, .tbl_type2 tr td:first-child {border-left:0;}
+.tbl_type3 tr:first-child td {border-top:0;}
+.tbl_type3 tr td.alignL {padding-left:20px;
+
+@media screen and (max-width:640px) {
+	.tbl_type1 td {padding: 8px 24px 7px 24px;}
+
+	.cnt table, .cnt table thead, .cnt table tbody, .cnt table th, .cnt table td, .cnt table tr {display: block; }
+	.cnt table {border:0;border-top:1px solid #dad8d8;border-right:1px solid #dad8d8;margin:40px 0 0 0}
+	.cnt table caption {display:block !important;visibility: visible !important;font-size:14px;font-weight:bold;margin:-30px 0 10px 0;text-align:left;}
+	.cnt table thead tr {position: absolute;top: -9999px;left: -9999px;}
+	.cnt table tr:nth-of-type(odd){background:#eee}
+	.cnt table td {position: relative;padding-left: 30% !important;border-right:0 !important;text-align: left !important;  }
+	.cnt table tr td:first-child {font-weight:bold;color:#355e84;}
+	.cnt table td:before { position: absolute;top: 2px;left: 5%;width: 45%;color: #333;font-weight:bold;padding-right: 10px;text-align: left; white-space: nowrap;}
+	.cnt table td.no_data:before { content: "" !important; }
+
+	.cnt table td:nth-of-type(1):before { content: "국가"; }
+	.cnt table td:nth-of-type(2):before { content: "위치"; }
+	.cnt table td:nth-of-type(3):before { content: "회사이름"; }
+	.cnt table td:nth-of-type(4):before { content: "주소"; }
+	.cnt table td:nth-of-type(5):before { content: "연락처"; }
+	.cnt table td:nth-of-type(6):before { content: "팩스"; }
+	
+	.cnt table [data-cell-header]:before {
+		content: attr(data-cell-header);margin:0 0 0 5%;
+		text-align: left;font-weight:bold;color: #333;
+	}
+
+	.stock_list_area table, .stock_list_area table thead, .stock_list_area table tbody, .stock_list_area table th, .stock_list_area table td, .stock_list_area table tr {display: block; }
+	.stock_list_area table {border:1px solid #dad8d8;margin:0}
+	.stock_list_area table caption {display:block !important;visibility: visible !important;font-size:14px;font-weight:bold;margin:-30px 0 10px 0;text-align:left;}
+	.stock_list_area table thead tr {position: absolute;top: -9999px;left: -9999px;}
+	.stock_list_area table tr:nth-of-type(odd){background:#eee}
+	.stock_list_area table td {position: relative;padding-left: 30% !important;border-right:0 !important;text-align: left !important;  }
+	.stock_list_area table tr td:first-child {font-weight:bold;color:#355e84;}
+	.stock_list_area table td:before { position: absolute;top: 8px;left: 5%;width: 45%;color: #333;font-weight:bold;padding-right: 10px;text-align: left; white-space: nowrap;}
+	.stock_list_area table td.no_data:before { content: "" !important; }
+	.stock_list_area .tbl_type2 td.gray_bg { background:transparent; }
+	.tbl_type2 tr:first-child td {border-top:1px solid #e4e4e4;}
+
+	.stock_list_area table td:nth-of-type(1):before { content: "번호"; }
+	.stock_list_area table td:nth-of-type(2):before { content: "일시"; }
+	.stock_list_area table td:nth-of-type(3):before { content: "공시제목"; }
+	.stock_list_area table td:nth-of-type(4):before { content: "제출자"; }
+
+	.gsm_area table, .gsm_area table thead, .gsm_area table tbody, .gsm_area table th, .gsm_area table td, .gsm_area table tr {display: block; }
+	.gsm_area table {border:1px solid #dad8d8;margin:0}
+	.gsm_area table caption {display:none !important;visibility: visible !important;font-size:14px;font-weight:bold;margin:-30px 0 10px 0;text-align:left;}
+	.gsm_area table thead tr {position: absolute;top: -9999px;left: -9999px;}
+	.gsm_area table tr:nth-of-type(odd){background:#eee !important}
+	.gsm_area table td {position: relative;height:auto;padding-left: 30% !important;border-left:0 !important;border-right:0 !important;text-align: left !important;  }
+	.gsm_area table tr td:first-child {font-weight:bold;color:#355e84;}
+	.gsm_area table td:before { position: absolute;top: 8px;left: 5%;width: 45%;color: #333;font-weight:bold;padding-right: 10px;text-align: left; white-space: nowrap;}
+	.gsm_area table td.no_data:before { content: "" !important; }
+
+	.gsm_area table td:nth-of-type(1):before { content: "No."; }
+	.gsm_area table td:nth-of-type(2):before { content: "Objectives"; }
+	.gsm_area table td:nth-of-type(3):before { content: "Result"; }
+
+	.fc_list_area table, .fc_list_area table thead, .fc_list_area table tbody, .fc_list_area table th, .fc_list_area table td, .fc_list_area table tr {display: block; }
+	.fc_list_area table {border:1px solid #dad8d8;margin:0}
+	.fc_list_area table caption {display:none !important;visibility: visible !important;font-size:14px;font-weight:bold;margin:-30px 0 10px 0;text-align:left;}
+	.fc_list_area table thead tr {position: absolute;top: -9999px;left: -9999px;}
+	.fc_list_area table tr:nth-of-type(odd){background:#eee !important}
+	.fc_list_area table td {position: relative;height:auto;padding-left: 30% !important;border-left:0 !important;border-right:0 !important;text-align: left !important;  }
+	.fc_list_area table tr td:first-child {font-weight:bold;color:#355e84;}
+	.fc_list_area table td:before { position: absolute;top: 8px;left: 5%;width: 45%;color: #333;font-weight:bold;padding-right: 10px;text-align: left; white-space: nowrap;}
+	.fc_list_area table td.no_data:before { content: "" !important; }
+	.fc_list_area .tbl_type1 tr.even td { background:transparent; }
+
+	.fc_list_area table td:nth-of-type(1):before { content: "Event Date"; }
+	.fc_list_area table td:nth-of-type(2):before { content: "Event"; }
+	.fc_list_area table td:nth-of-type(3):before { content: "Reminder"; }
+
+}
+
+@media screen and (max-width:400px) {
+	/* 1106 km */
+	.cnt table td {padding-left: 42% !important;}
+	.tbl_type1 td {padding:8px 10px 7px 10px !important; }
+}
