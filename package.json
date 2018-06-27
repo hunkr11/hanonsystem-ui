@@ -1,14 +1,15 @@
 {
-  "name": "angular-thattu-kada",
+  "name": "hanonsystem",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",    
+    "ng": "ng",
+    "start": "node server.js",    
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --target=production"
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -26,9 +27,11 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.4.1",
     "underscore": "^1.8.3",
-    "zone.js": "^0.8.14",
-    "@angular/cli": "1.2.6",
-    "@angular/compiler-cli": "^4.0.0",
+    "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+    "@angular/cli": "6.0.8",
+    "@angular/compiler-cli": "^4.4.7",
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
@@ -47,7 +50,8 @@
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
   },
-  "devDependencies": {
-    
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
   }
 }
