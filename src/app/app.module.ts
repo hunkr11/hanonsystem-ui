@@ -7,6 +7,7 @@ import { FileUploadComponent } from './pages/licence-class-master/file-upload';
 import { FormsModule } from '@angular/forms';
 import { LicenceService } from './service/licence.service';
 import {HttpClientModule} from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,HttpModule,FormsModule,HttpClientModule
   ],
-  providers: [LicenceService],
+  providers: [LicenceService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
